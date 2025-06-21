@@ -1,0 +1,194 @@
+/* src/styles/AuthStyles.css */
+.auth-card {
+  width:500px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  background: rgba(44, 62, 80, 0.2); /* Dark glass effect */
+  backdrop-filter: blur(10px); /* Glassmorphism blur */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+  .auth-container {
+    background: linear-gradient(180deg, #1C2431 0%, #1a1a1a 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .auth-container h2 {
+    margin-bottom: 25px;
+    color: whitesmoke; /* Darker blue heading */
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .auth-container .error {
+    color: #e74c3c;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: #FDECEA;
+    border-radius: 3px;
+  }
+  
+  .auth-container form {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: center;
+  }
+  
+  .auth-container label {
+    text-align: left;
+    font-weight: bold;
+    color: white; /* Mid-tone blue label */
+    font-family:'Times New Roman', Times, serif;
+  }
+  
+  .auth-container form > div {
+    display: contents;
+  }
+  
+  .auth-container input[type='email'],
+  .auth-container input[type='password'],
+  .auth-container input[type='password']#confirmPassword {
+    padding: 12px;
+    border: 1px solid #BDD5EA; /* Light blue border for inputs */
+    border-radius: 5px;
+    font-size: 16px;
+    color: black; /* Darker blue text in inputs */
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .auth-container button {
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .auth-container button[type='submit'] {
+    background-color: #38598B; /* Mid-tone blue submit button */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border: 1px solid #38598B; 
+    box-shadow: 0 0 10px rgba(43, 58, 103, 0.4);
+  }
+  
+  .auth-container button[type='submit']:hover {
+    background-color: #2B3A67; /* Darker blue on hover */
+  }
+  
+  .auth-container button[type='button'] {
+    background-color: #233B5E; /* Light blue for Google sign-in button */
+    color: #F4F4F4; /* Darker blue text */
+    border: 1px solid #38598B; /* Mid-tone blue border */
+    font-family: 'Times New Roman', Times, serif;
+    box-shadow: 0 0 10px rgba(43, 58, 103, 0.4);
+  }
+  
+  .auth-container button[type='button']:hover {
+    background-color: #98B4C7; /* Slightly darker light blue on hover */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    border-color: #2B3A67; /* Darker blue border on hover */
+  }
+  
+  .auth-container p {
+    margin-top: 20px;
+    color: #FDECEA;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .auth-container p a {
+    color: #FDECEA; /* Mid-tone blue link */
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .auth-container p a:hover {
+    text-decoration: underline;
+  }
+ /* Mobile View Styles */
+@media (max-width: 600px) {
+  .auth-card {
+    max-width: 350px; /* Make the card wider on smaller screens */
+    margin: 30px auto; /* Reduce top/bottom margin */
+    padding: 20px; /* Reduce padding */
+  }
+
+  .auth-container h2 {
+    font-size: 2rem; /* Slightly smaller heading */
+    margin-bottom: 20px;
+  }
+
+  .auth-container form {
+    grid-template-columns: 1fr; /* Stack labels and inputs */
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .auth-container label {
+    text-align: left;
+    font-size: 0.9rem; /* Slightly smaller label text */
+  }
+
+  .auth-container input[type='email'],
+  .auth-container input[type='password'],
+  .auth-container input[type='password']#confirmPassword {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .auth-container button {
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .auth-container p {
+    font-size: 0.9rem;
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 400px) {
+  .auth-card {
+    padding: 15px;
+  }
+
+  .auth-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .auth-container label {
+    font-size: 0.8rem;
+  }
+
+  .auth-container input[type='email'],
+  .auth-container input[type='password'],
+  .auth-container input[type='password']#confirmPassword {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  .auth-container button {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+
+  .auth-container p {
+    font-size: 0.8rem;
+    margin-top: 10px;
+  }
+}

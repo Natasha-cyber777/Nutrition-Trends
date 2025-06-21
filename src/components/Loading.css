@@ -1,0 +1,51 @@
+/* src/components/Loading.css */
+.loading-wrapper {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(to bottom, #0a0a0a, #1b1f23);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #c9d1d9;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .loading-logo {
+    width: 80px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 0 10px #58a6ff);
+    animation: float 2s ease-in-out infinite;
+  }
+  
+  .custom-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(88, 166, 255, 0.2);
+    border-left-color: #58a6ff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  .loading-text {
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color: #8b949e;
+  }
+  
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  

@@ -1,0 +1,170 @@
+/* src/styles/NavbarStyles.css */
+:root {
+    --dark-navy: #000000;
+    --steel-blue: #4B77BE;
+    --white: #FFFFFF;
+  }
+  
+  .navbar {
+    background-color: var(--dark-navy);
+    color: var(--white);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* cap the width */
+    width: 100%; /* better than 100vw when using padding */
+    box-sizing: border-box;
+    height: 60px; /* crucial to make padding not overflow */
+  }
+  
+  
+  .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .navbar-logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+  
+  .navbar-title {
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  
+  .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 20px;
+  }
+  
+  .nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .nav-link:hover {
+    color: var(--steel-blue);
+  }
+  
+  .logout-button {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-weight: 500;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: color 0.3s ease;
+  }
+  
+  .logout-button:hover {
+    color: var(--steel-blue);
+  }
+  .navbar-toggle {
+    background: none;
+    border: none;
+    color: var(--white);
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hidden by default - CORRECTED */
+  }
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px 10px;
+      position: fixed; /* Ensures it's still fixed on scroll */
+      width: 100%;
+      top: 10;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+  
+    .navbar-brand {
+      margin-bottom: 10px;
+    }
+  
+    .navbar-toggle {
+      display: block; /* Show toggle button on mobile */
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      color: white;
+      z-index: 1001; /* Ensure it stays above menu */
+      cursor: pointer;
+    }
+  
+    .navbar-nav {
+      display: none; /* Hidden by default */
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .navbar-nav.open {
+      display: flex; /* Show when .open is added */
+      flex-direction: column;
+      position: absolute;
+      top: 70px; /* same as navbar height */
+      left: 0;
+      width: 100%;
+      background-color: var(--dark-navy); /* Set background */
+      padding: 20px;
+      z-index: 999;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .nav-item {
+      margin-left: 0;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+  
+    .nav-link,
+    .logout-button {
+      display: block;
+      width: 100%;
+      text-align: left;
+      padding: 10px 15px;
+      border-radius: 0;
+      color: white;
+      text-decoration: none;
+    }
+  
+    .nav-link:hover,
+    .nav-link.active,
+    .logout-button:hover {
+      background-color: var(--mid-navy);
+    }
+  }
+  

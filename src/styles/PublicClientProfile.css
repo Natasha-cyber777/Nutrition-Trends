@@ -1,0 +1,75 @@
+/* src/styles/PublicClientProfile.css */
+
+.public-profile-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .public-profile-container h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 2px solid #bbb;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profile-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .public-profile-container p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  
+  .public-profile-container p strong {
+    font-weight: bold;
+    color: #333;
+    margin-right: 5px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .public-profile-container {
+      margin: 15px;
+      padding: 15px;
+    }
+  
+    .public-profile-container h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+  
+    .profile-image {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 15px;
+    }
+  
+    .public-profile-container p {
+      font-size: 0.95em;
+      margin-bottom: 8px;
+    }
+  }
+  
+  /* Add more specific styling as needed */

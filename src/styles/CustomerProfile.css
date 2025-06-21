@@ -1,0 +1,377 @@
+/* MyProfilePage.css */
+
+body {
+    background-color: #F4F7F6; /* Light, neutral background */
+    font-family: 'Open Sans', sans-serif; /* A clean and readable sans-serif font */
+    line-height: 1.7;
+    color: #333;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.profile-container {
+    width: 95%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FFFFFF; /* Clean white container */
+    border: 1px solid #E0E0E0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.profile-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #37474F; /* Dark grey heading */
+    font-size: 2.4rem;
+    font-weight: 400; /* Less bold heading */
+}
+
+/* --- Simplified Edit Form (No Cards) --- */
+.profile-form {
+    display: grid;
+    gap: 20px; /* Increased spacing between form groups */
+    padding: 25px;
+    background-color: #F9F9F9; /* Light grey form background */
+    border-radius: 6px;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px; /* Increased spacing between label and input */
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 6px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group input[type="date"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea,
+.form-group input[type="file"] {
+    padding: 12px 15px;
+    border: 1px solid #BDBDBD; /* Medium grey border */
+    border-radius: 6px;
+    font-size: 1.1rem;
+    color: #333;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+    width: 100%; /* Make inputs full width on mobile */
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="number"]:focus,
+.form-group input[type="date"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus,
+.form-group input[type="file"]:focus {
+    border-color: #1E88E5; /* Blue focus color */
+    outline: none;
+    box-shadow: 0 0 6px rgba(30, 136, 229, 0.3);
+}
+
+.unit-input {
+    display: flex;
+    gap: 10px;
+    flex-direction: column; /* Stack unit input on mobile */
+}
+
+.unit-input input[type="number"],
+.unit-input select {
+    flex-grow: 1;
+    padding: 12px 15px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    border: 1px solid #BDBDBD;
+    width: 100%; /* Make unit inputs full width on mobile */
+    box-sizing: border-box;
+}
+
+.form-group > div > label {
+    font-weight: 400;
+    margin-right: 15px;
+    display: block; /* Make labels take full width on mobile */
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.form-group > div > label input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* --- Updated Form Actions --- */
+.form-actions {
+    margin-top: 30px;
+    text-align: right;
+    display: flex; /* Arrange buttons horizontally on larger screens */
+    flex-direction: column; /* Stack buttons on mobile */
+    gap: 10px; /* Spacing between buttons */
+}
+
+.form-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #1E88E5; /* Blue primary button */
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Make buttons full width on mobile */
+    box-sizing: border-box;
+}
+
+.form-actions button:first-child {
+    margin-left: 0;
+}
+
+.form-actions button:hover {
+    background-color: #1565C0;
+}
+
+.form-actions button[type="button"] {
+    background-color: #7CB342; /* Green secondary button */
+}
+
+.form-actions button[type="button"]:hover {
+    background-color: #558B2F;
+}
+
+/* --- Improved Profile Info Display (No Cards) --- */
+.profile-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 6px;
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.profile-info > div { /* Grouping for better spacing */
+    margin-bottom: 20px;
+}
+
+.profile-info > div:last-child {
+    margin-bottom: 0;
+}
+
+.profile-info h4 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #37474F;
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #F0F0F0;
+    padding-bottom: 8px;
+}
+
+.profile-info p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: justify; /* Justify the content */
+    word-break: break-word; /* Prevent long words from breaking layout */
+}
+
+.profile-info p strong {
+    font-weight: 600;
+    color: #546E7A;
+}
+
+.profile-info button {
+    display: block; /* Make the button take full width */
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    background-color: #7CB342; /* Green edit button */
+    color: #FFFFFF;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.profile-info button:hover {
+    background-color: #558B2F;
+}
+
+/* --- Consistent Submission Message --- */
+.submission-message {
+    margin-top: 25px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.1rem;
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.submission-message.success {
+    background-color: #E6F4EA;
+    color: #388E3C;
+    border: 1px solid #BCE0C2;
+}
+
+.submission-message.error {
+    background-color: #FFEBEE;
+    color: #D32F2F;
+    border: 1px solid #FBC4C4;
+}
+
+/* --- Profile Image --- */
+.profile-image {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.profile-image img {
+    max-width: 100%; /* Make image responsive */
+    border-radius: 50%;
+    border: 2px solid #BDBDBD;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* --- Loading/Error States --- */
+.profile-container > div {
+    text-align: center;
+    padding: 20px;
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.profile-container > div strong {
+    font-weight: 500;
+    color: #D32F2F;
+}
+
+.form-group p { /* Uploading image text */
+    font-size: 1rem;
+    color: #777;
+    margin-top: 6px;
+}
+
+/* --- Mobile View Adjustments --- */
+@media (max-width: 768px) {
+    .profile-container {
+        margin: 20px auto;
+        padding: 20px;
+        width: 98%; /* Take up more width on smaller screens */
+    }
+
+    .profile-container h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-form {
+        padding: 15px;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        margin-bottom: 4px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="number"],
+    .form-group input[type="date"],
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea,
+    .form-group input[type="file"],
+    .unit-input input[type="number"],
+    .unit-input select {
+        padding: 10px 12px;
+        font-size: 1rem;
+    }
+
+    .unit-input {
+        flex-direction: column; /* Stack unit input on mobile */
+        gap: 8px;
+    }
+
+    .form-group > div > label {
+        margin-bottom: 6px;
+        font-size: 1rem;
+    }
+
+    .form-actions {
+        margin-top: 20px;
+        flex-direction: column; /* Stack buttons on mobile */
+        gap: 8px;
+        text-align: center; /* Center buttons on mobile */
+    }
+
+    .form-actions button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .profile-info {
+        margin-top: 20px;
+        padding: 15px;
+    }
+
+    .profile-info h4 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+        padding-bottom: 6px;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .profile-info button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+
+    .profile-image img {
+        max-width: 180px;
+    }
+
+    .profile-container > div {
+        font-size: 1rem;
+        padding: 15px;
+    }
+
+    .form-group p { /* Uploading image text */
+        font-size: 0.9rem;
+        margin-top: 4px;
+    }
+}

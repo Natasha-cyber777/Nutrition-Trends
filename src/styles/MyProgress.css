@@ -1,0 +1,200 @@
+/* src/styles/MyProgress.css */
+
+.my-progress-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.my-progress-container h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.my-progress-container label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.my-progress-container input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.progress-summary,
+.progress-form {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.progress-summary h3,
+.progress-form h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.meals-checklist h4,
+.meals-summary h4 {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.meals-checklist ul,
+.meals-summary ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.meals-checklist li,
+.meals-summary li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.meals-checklist li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.progress-bar-container {
+  background-color: #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+  width: 0%; /* Set dynamically based on progress */
+}
+
+.cheerful-message {
+  color: #2196f3;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.additional-info {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+.additional-info h4 {
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.progress-form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.progress-form button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.progress-form button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.progress-summary button {
+  background-color: #6c757d;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.progress-summary button:hover {
+  background-color: #5a6268;
+}
+
+.error-message {
+  color: #dc3545;
+  margin-top: 10px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .my-progress-container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  .my-progress-container h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+  }
+
+  .progress-summary h3,
+  .progress-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+  }
+
+  .form-group {
+    margin-bottom: 12px;
+  }
+
+  .progress-form button[type="submit"],
+  .progress-summary button {
+    font-size: 0.9em;
+    padding: 8px 12px;
+  }
+}

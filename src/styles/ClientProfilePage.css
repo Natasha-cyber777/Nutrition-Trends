@@ -1,0 +1,170 @@
+/* src/styles/ClientProfilePage.css */
+
+.client-profile-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.client-profile-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.client-profile-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.client-profile-form .form-group {
+    margin-bottom: 15px;
+}
+
+.client-profile-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.client-profile-form input[type="text"],
+.client-profile-form input[type="email"],
+.client-profile-form input[type="tel"],
+.client-profile-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.client-profile-form textarea {
+    min-height: 100px;
+}
+
+.client-profile-form input[type="file"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #eee;
+}
+
+.client-profile-form .profile-image {
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+}
+
+.client-profile-form .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-profile-form .form-actions {
+    margin-top: 20px;
+}
+
+.client-profile-form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.client-profile-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    margin-right: 10px;
+}
+
+.client-profile-form button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+.client-profile-form button:hover {
+    opacity: 0.9;
+}
+
+.client-profile-form .submission-message {
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.client-profile-form .submission-message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.client-profile-form .submission-message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.client-profile-container .profile-info {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.client-profile-container .profile-info .profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px;
+    border: 2px solid #ddd;
+}
+
+.client-profile-container .profile-info .profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.client-profile-container .profile-info p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.client-profile-container .profile-info strong {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #555;
+}
+
+.client-profile-container .profile-info button {
+    display: block;
+    width: 150px;
+    margin: 20px auto 0;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.client-profile-container .profile-info button:hover {
+    opacity: 0.9;
+}

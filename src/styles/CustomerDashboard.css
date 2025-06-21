@@ -1,0 +1,227 @@
+/* Customer Dashboard Styles */
+.dashboard-container {
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.username {
+    color: #354f6b;
+    font-size: 36px;
+    text-align: center;
+}
+
+.customer-dashboard h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #354f6b;
+    margin-bottom: 10px;
+}
+
+.dashboard-content {
+    padding: 15px;
+}
+
+.dashboard-content h2 {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Diet Plan Details */
+.diet-plan-details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.diet-plan-details h3 {
+    font-size: 20px;
+    color: #354f6b;
+    margin-bottom: 10px;
+}
+
+.diet-plan-details h4 {
+    font-size: 18px;
+    color: #444;
+    margin-top: 10px;
+}
+
+/* Table Styles */
+.meals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.meals-table th,
+.meals-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.meals-table th {
+    background: #354f6b;
+    color: white;
+    font-weight: bold;
+}
+
+.meals-table tr:nth-child(even) {
+    background: #f2f2f2;
+}
+
+/* Notes Section */
+.notes-section {
+    background: #e9f5ff;
+    padding: 10px;
+    border-left: 4px solid #007bff;
+    margin-top: 15px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding and border are within the width */
+}
+
+.notes-section h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #007bff;
+}
+
+.notes-section p {
+    margin: 5px 0 0;
+    font-size: 16px;
+    color: #333;
+    word-break: break-word; /* Prevent long notes from breaking layout */
+}
+
+/* Uploaded At */
+.uploaded-at {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    text-align: right;
+}
+
+/* Weekly Meal Plan Grid Styles */
+.weekly-meals-grid {
+    margin-top: 25px;
+    overflow-x: auto; /* For horizontal scrolling if table is wide */
+}
+
+.weekly-meals-grid h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .dashboard-container {
+        width: 98%; /* Take up more width on smaller screens */
+        margin: 5px auto;
+        padding: 5px;
+    }
+
+    .username {
+        font-size: 1.5em;
+    }
+
+    .customer-dashboard h1 {
+        font-size: 1.8em;
+    }
+
+    .dashboard-content h2 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    /* Diet Plan Details */
+    .diet-plan-details h3 {
+        font-size: 1.2em;
+        margin-bottom: 8px;
+    }
+
+    .diet-plan-details h4 {
+        font-size: 1em;
+        margin-top: 8px;
+    }
+
+    /* Table Styles */
+    .meals-table {
+        display: none; /* Hide default table on mobile */
+    }
+
+    /* Notes Section */
+    .notes-section {
+        padding: 8px;
+        margin-top: 10px;
+        border-left-width: 3px;
+    }
+
+    .notes-section h4 {
+        font-size: 1.1em;
+    }
+
+    .notes-section p {
+        font-size: 0.9em;
+    }
+
+    /* Uploaded At */
+    .uploaded-at {
+        font-size: 0.8em;
+        margin-top: 8px;
+        text-align: left; /* Align left on mobile for better readability */
+    }
+
+    /* Weekly Meal Plan Grid - Mobile View (Card Layout) */
+    .weekly-meals-grid {
+        margin-top: 20px;
+    }
+
+    .weekly-meals-grid h3 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .daily-plan-card {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .daily-plan-card h4 {
+        color: #007bff;
+        margin-top: 0;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #ddd;
+        padding-bottom: 4px;
+        font-size: 1em;
+    }
+
+    .daily-plan-meals {
+        display: grid;
+        grid-template-columns: auto; /* Single column layout on mobile */
+        gap: 5px;
+        margin-bottom: 8px;
+    }
+
+    .meal-label {
+        font-weight: bold;
+        color: #555;
+        font-size: 0.8em;
+    }
+
+    .meal-value {
+        color: #333;
+        font-size: 0.8em;
+        word-break: break-word;
+    }
+}

@@ -1,0 +1,461 @@
+/* src/styles/ClientDashboard.css */
+
+/* Color Palette */
+:root {
+  --dark-blue-grey: #222B33;
+  --medium-blue-grey: #4A535B;
+  --teal: #00A79D;
+  --light-grey: #F4F4F4;
+  --white: #fff;
+  --grey-text: #333;
+  --secondary-text: #555;
+  --border-color: #ddd;
+  --light-border: #eee;
+  --table-header: #f0f0f0;
+  --success-color: green;
+  --error-color: red;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.client-dashboard {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: var(--light-grey);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: 1203px;
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container h1 {
+  text-align: center;
+  color: var(--dark-blue-grey);
+  margin-bottom: 20px;
+}
+
+.dashboard-content h2 {
+  color: var(--medium-blue-grey);
+  margin-top: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--light-border);
+  padding-bottom: 10px;
+}
+
+.diet-plan-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.diet-plan-form > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.diet-plan-form label {
+  margin-bottom: 5px;
+  color: var(--grey-text);
+  font-weight: bold;
+}
+
+.diet-plan-form input[type="text"],
+.diet-plan-form input[type="date"],
+.diet-plan-form select,
+.diet-plan-form textarea {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.diet-plan-form textarea {
+  resize: vertical;
+}
+
+.date-range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.weekly-meals-grid {
+  margin-top: 20px;
+}
+
+.weekly-meals-grid h3 {
+  color: var(--medium-blue-grey);
+  margin-bottom: 10px;
+}
+
+.meals-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.meals-table th,
+.meals-table td {
+  border: 1px solid var(--border-color);
+  padding: 8px;
+  text-align: center;
+}
+
+.meals-table th {
+  background-color: var(--table-header);
+  font-weight: bold;
+  color: var(--grey-text);
+}
+
+.meals-table td input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  box-sizing: border-box;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  color: var(--secondary-text);
+}
+
+.diet-plan-form button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--teal);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.diet-plan-form button:hover {
+  background-color: #008078; /* Slightly darker shade of teal */
+}
+
+.diet-plan-form button[type="button"] {
+  background-color: var(--medium-blue-grey);
+}
+
+.diet-plan-form button[type="button"]:hover {
+  background-color: #373e44; /* Slightly darker shade of medium blue-grey */
+}
+
+.existing-diet-plans,
+.saved-diet-plans-section {
+  margin-top: 30px;
+  padding: 15px;
+  border: 1px solid var(--light-border);
+  border-radius: 4px;
+  background-color: var(--light-grey);
+}
+
+.existing-diet-plans h3,
+.saved-diet-plans-section h3 {
+  color: var(--medium-blue-grey);
+  margin-bottom: 10px;
+}
+
+.existing-diet-plans ul,
+.saved-diet-plans-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.existing-diet-plans li,
+.saved-diet-plans-section li {
+  padding: 8px 0;
+  border-bottom: 1px dotted var(--light-border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--secondary-text);
+}
+
+.existing-diet-plans li:last-child,
+.saved-diet-plans-section li:last-child {
+  border-bottom: none;
+}
+
+.existing-diet-plans li button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #28a745; /* Keep these for semantic meaning */
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.existing-diet-plans li button:hover {
+  background-color: #1e7e34;
+}
+
+.existing-diet-plans li button:nth-child(3) {
+  background-color: #dc3545;
+}
+
+.existing-diet-plans li button:nth-child(3):hover {
+  background-color: #c82333;
+}
+
+.existing-diet-plans li button:nth-child(4) {
+  background-color: #ffc107;
+  color: var(--grey-text);
+}
+
+.existing-diet-plans li button:nth-child(4):hover {
+  background-color: #e0a800;
+}
+
+.diet-plan-details {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: var(--white);
+  color: var(--secondary-text);
+}
+
+.diet-plan-details h4 {
+  color: var(--medium-blue-grey);
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.diet-plan-details h5 {
+  color: var(--dark-blue-grey);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.diet-plan-details .meals-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.diet-plan-details .meals-list li {
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--light-border);
+}
+
+.diet-plan-details .meals-list li:last-child {
+  border-bottom: none;
+}
+
+.diet-plan-details .notes-section {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid var(--light-border);
+  border-radius: 4px;
+  background-color: var(--light-grey);
+}
+
+.diet-plan-details .notes-section h4 {
+  color: var(--medium-blue-grey);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.diet-plan-details .uploaded-at {
+  font-size: 0.9em;
+  color: var(--medium-blue-grey);
+  margin-top: 10px;
+}
+
+.success {
+  color: var(--success-color);
+  margin-top: 10px;
+}
+
+.error {
+  color: var(--error-color);
+  margin-top: 10px;
+}
+
+.saved-diet-plans-section h3 button {
+  padding: 8px 12px;
+  margin-left: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--teal);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.saved-diet-plans-section h3 button:hover {
+  background-color: #008078;
+}
+
+.mobile-weekly-plan {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.daily-plan-card {
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  padding: 15px;
+  background-color: var(--white);
+}
+
+.daily-plan-card h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--medium-blue-grey);
+}
+
+.daily-plan-meals {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 5px;
+  padding: 5px 0;
+  border-bottom: 1px dotted var(--light-border);
+  color: var(--secondary-text);
+}
+
+.daily-plan-meals:last-child {
+  border-bottom: none;
+}
+
+.meal-label {
+  font-weight: bold;
+  color: var(--grey-text);
+}
+
+.meal-value {
+  color: var(--secondary-text);
+}
+
+/* Mobile View Styles */
+@media (max-width: 768px) {
+  .dashboard-container {
+      width: 98%;
+      padding: 15px;
+  }
+
+  .dashboard-container h1 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+  }
+
+  .dashboard-content h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+  }
+
+  .diet-plan-form {
+      gap: 10px;
+      margin-bottom: 15px;
+  }
+
+  .diet-plan-form label {
+      font-size: 0.9em;
+      margin-bottom: 3px;
+  }
+
+  .diet-plan-form input[type="text"],
+  .diet-plan-form input[type="date"],
+  .diet-plan-form select,
+  .diet-plan-form textarea {
+      padding: 8px;
+      font-size: 1em;
+  }
+
+  .date-range {
+      grid-template-columns: 1fr;
+      gap: 8px;
+  }
+
+  .meals-table {
+      display: none; /* Keep hiding the table */
+  }
+
+  .mobile-weekly-plan {
+      display: flex; /* Show the mobile-friendly weekly plan */
+  }
+
+  .existing-diet-plans,
+  .saved-diet-plans-section {
+      margin-top: 20px;
+      padding: 10px;
+  }
+
+  .existing-diet-plans h3,
+  .saved-diet-plans-section h3 {
+      font-size: 1em;
+      margin-bottom: 8px;
+  }
+
+  .existing-diet-plans li,
+  .saved-diet-plans-section li {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+      font-size: 0.9em;
+  }
+
+  .existing-diet-plans li button {
+      margin-right: 5px;
+      margin-bottom: 5px;
+      font-size: 0.8em;
+      padding: 6px 10px;
+  }
+
+  .diet-plan-details h4 {
+      font-size: 1em;
+      margin-bottom: 8px;
+  }
+
+  .diet-plan-details h5 {
+      font-size: 0.9em;
+      margin-top: 8px;
+      margin-bottom: 3px;
+  }
+
+  .diet-plan-details .meals-list li {
+      font-size: 0.8em;
+  }
+
+  .diet-plan-details .notes-section h4 {
+      font-size: 0.9em;
+      margin-bottom: 3px;
+  }
+
+  .diet-plan-details .uploaded-at {
+      font-size: 0.7em;
+      margin-top: 6px;
+  }
+
+  .success,
+  .error {
+      font-size: 0.8em;
+      margin-top: 6px;
+  }
+
+  .saved-diet-plans-section h3 button {
+      margin-left: 0;
+      margin-top: 10px;
+      font-size: 0.8em;
+      padding: 6px 10px;
+      width: 100%;
+  }
+}
